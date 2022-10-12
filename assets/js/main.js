@@ -66,14 +66,22 @@ btnNext.addEventListener('click',function() {
     console.log('next');
 
     //seleziona tutte le immagini nel markup con lo scopo di trovare quella attiva
-    const slides = document.querySelectorAll('box > img');
+    const slides = document.querySelectorAll('.box > img');
 
     //console.log(carosello[immagineAttiva]);  //visualizzo l'immagine attualmente attiva
-    const currentSlide = carosello[immagineAttiva] 
+    const slideattiva = slides[immagineAttiva] 
 
     //tolgo la classe attiva
-    currentSlide.classList.remove('active')
+    slideattiva.classList.remove('active')
 
+    //incremento immagineAttiva
+    immagineAttiva++
+
+    //seleziono la seconda immagine
+    const nextSlide = slides[immagineAttiva]
+
+    //applico la classe attiva
+    nextSlide.classList.add('active')
 })
 
 
@@ -81,5 +89,23 @@ btnNext.addEventListener('click',function() {
 
 btnback.addEventListener('click',function() {
     console.log('back');
+
+        //seleziona tutte le immagini nel markup con lo scopo di trovare quella attiva
+        const slides = document.querySelectorAll('.box > img');
+
+        //console.log(carosello[immagineAttiva]);  //visualizzo l'immagine attualmente attiva
+        const slideattiva = slides[immagineAttiva] 
+    
+        //tolgo la classe attiva
+        slideattiva.classList.remove('active')
+    
+        //decremento immagineAttiva
+        immagineAttiva--
+    
+        //seleziono la seconda immagine
+        const nextSlide = slides[immagineAttiva]
+    
+        //applico la classe attiva
+        nextSlide.classList.add('active')
 })
 
