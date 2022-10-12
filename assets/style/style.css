@@ -1,9 +1,14 @@
-.box{
-    width: 400px;
-    margin: auto;
+
+.box > img:not(img.active){
+    display: none;
+}
+
+.box > img.active{
+    display: block;
 }
 
 img{
     width: 100%;
+    
 }
 
