@@ -75,7 +75,7 @@ btnNext.addEventListener('click',function() {
     slideattiva.classList.remove('active')
 
     //incremento immagineAttiva
-    immagineAttiva++
+    immagineAttiva++  //immagineAttiva = immagineAttiva + 1
 
     //seleziono la seconda immagine
     const nextSlide = slides[immagineAttiva]
